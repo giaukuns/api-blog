@@ -1,4 +1,4 @@
-// require("dotenv").config();
+require("dotenv").config();
 /**
  * Khai báo thư viện
  */
@@ -14,7 +14,7 @@ const connectDB = require("./utils/connectDb.js");
 const User = require("./routers/User/user");
 const Login = require("./routers/User/login");
 const app = express();
-const port = 8000;
+const port = process.env.PORT;
 /*-Gọi kết nối database-*/
 connectDB();
 /**

@@ -21,7 +21,21 @@ const User = new Schema({
       return value.toLowerCase();
     },
   },
-  avatar: String,
+  avatar: [
+    {
+      public_id: String,
+      url: String,
+      width: String,
+      height: String,
+      secure_url: String,
+      asset_id: String,
+      signature: String,
+      bytes: String,
+      etag: String,
+      created_at: String,
+      version_id: String,
+    },
+  ],
   email: String,
   password: String,
 });
